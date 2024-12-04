@@ -12,7 +12,7 @@ public interface CustomerService {
 
     void deleteById(Long id);
 
-    void update(Customer student);
+    void update(Customer customer);
 
     List<Customer> getAll();
 }
