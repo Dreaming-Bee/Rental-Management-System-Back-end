@@ -5,6 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+
+import java.util.List;
+
 @Entity
 @Data
 @AllArgsConstructor
@@ -19,4 +22,7 @@ public class CustomerEntity {
     private String customerName;
     private Integer contact;
     private String city;
+
+    @OneToMany(mappedBy = "customer")
+    private List<RentalEntity> rentals;
 }

@@ -7,6 +7,9 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Data
 @AllArgsConstructor
@@ -30,5 +33,8 @@ public class BillEntity {
     private Double rental;
     private Double fine;
     private Double totalCost;
+
+    @OneToMany(mappedBy = "bill", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<RentalEntity> rentals = new ArrayList<>();
 
 }

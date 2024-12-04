@@ -24,4 +24,12 @@ public class RentalEntity {
     private Double rental;
     private Double fine;
 
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private CustomerEntity customer;
+
+    @ManyToOne
+    @JoinColumn(name = "bill_id")
+    private BillEntity bill;
+
 }

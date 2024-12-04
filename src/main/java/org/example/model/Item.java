@@ -15,5 +15,5 @@ public class Item {
     private String itemName;
     private Double rentalPerDay;
     private Double finePerDay;
-    private Double availability;
+    private String availability;
 }

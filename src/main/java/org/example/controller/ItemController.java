@@ -16,7 +16,7 @@ public class ItemController {
 
     final ItemService itemService;
 
-    @PostMapping("/add-customer")
+    @PostMapping("/add-item")
     public void addItem(@RequestBody Item item) {
         itemService.addItem(item);
     }

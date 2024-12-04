@@ -20,5 +20,5 @@ public class ItemEntity {
     private String itemName;
     private Double rentalPerDay;
     private Double finePerDay;
-    private Double availability;
+    private String availability;
 }
